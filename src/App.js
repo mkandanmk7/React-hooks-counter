@@ -33,7 +33,7 @@ function App() {
             {name}
           </p>
           <div className="name">
-            <button onClick={() => changeName("Muthu")}>Change Name</button>
+            <button onClick={() => changeName("Mythu")}>Change Name</button>
           </div>
         </div>
         <div className="btns">
