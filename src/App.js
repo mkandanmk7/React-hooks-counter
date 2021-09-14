@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Reducer from "./Reducer";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <>
+      <Reducer />
       <div className="App">
         <h1>Fucntional Counter</h1>
         <div className="counter">
