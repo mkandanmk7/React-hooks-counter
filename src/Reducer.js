@@ -1,5 +1,13 @@
 import React, { useReducer } from "react";
 
+//actions:
+
+const Inc = "inc";
+const Dec = "dec";
+const Reset = "reset";
+
+//reducer function:
+
 const countReducer = (count, action) => {
   //   console.log("reducer");
 
@@ -31,21 +39,21 @@ function Reducer() {
   //     dispatch("dec");
   //   };
   let reset = () => {
-    dispatch("reset");
+    dispatch(Reset);
   };
   return (
     <>
       <p>Count: {count}</p>
       <button
         onClick={() => {
-          dispatch({ type: "inc", by: 1.5 });
+          dispatch({ type: Inc, by: 1.5 });
         }}
       >
         Increment
       </button>
       <button
         onClick={() => {
-          dispatch({ type: "dec" });
+          dispatch({ type: Dec });
         }}
       >
         Decrement
