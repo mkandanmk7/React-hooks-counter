@@ -16,7 +16,7 @@ const countReducer = (count, action) => {
       return count + action.by;
     }
     case "dec": {
-      return count - 1;
+      if (count > 0) return count - 1;
     }
     case "reset":
       {
@@ -38,9 +38,9 @@ function Reducer() {
   //   let dec = () => {
   //     dispatch("dec");
   //   };
-  let reset = () => {
-    dispatch(Reset);
-  };
+  // let reset = () => {
+  //   dispatch(Reset);
+  // };
   return (
     <>
       <div className="container-sm">
@@ -62,7 +62,13 @@ function Reducer() {
         >
           Decrement
         </button>
-        <button onClick={reset}>Reset</button>
+        <button
+          onClick={() => {
+            dispatch({ type: Reset });
+          }}
+        >
+          Reset
+        </button>
       </div>
     </>
   );
