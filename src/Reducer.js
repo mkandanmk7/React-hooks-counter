@@ -20,7 +20,7 @@ const countReducer = (count, action) => {
     }
     case "reset":
       {
-        return 0;
+        return (count = 0);
       }
       defalut: {
         return count;
@@ -43,22 +43,27 @@ function Reducer() {
   };
   return (
     <>
-      <p>Count: {count}</p>
-      <button
-        onClick={() => {
-          dispatch({ type: Inc, by: 1.5 });
-        }}
-      >
-        Increment
-      </button>
-      <button
-        onClick={() => {
-          dispatch({ type: Dec });
-        }}
-      >
-        Decrement
-      </button>
-      <button onClick={reset}>Reset</button>
+      <div className="container-sm">
+        <h1 className="text-center bg-danger text-white ">
+          Count Using Reducer!
+        </h1>
+        <p>Count: {count}</p>
+        <button
+          onClick={() => {
+            dispatch({ type: Inc, by: 1.5 });
+          }}
+        >
+          Increment
+        </button>
+        <button
+          onClick={() => {
+            dispatch({ type: Dec });
+          }}
+        >
+          Decrement
+        </button>
+        <button onClick={reset}>Reset</button>
+      </div>
     </>
   );
 }

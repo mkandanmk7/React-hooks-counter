@@ -26,9 +26,9 @@ function App() {
   return (
     <>
       <Reducer />
-      <div className="App">
+      <div className="App container-sm">
         <h1>Fucntional Counter</h1>
-        <div className="counter">
+        <div className="counter text-primary">
           <p>Counter : {count}</p>
           <p>
             <b>Name: </b>
@@ -38,10 +38,22 @@ function App() {
             <button onClick={() => changeName("Muthu")}>Change Name</button>
           </div>
         </div>
-        <div className="btns">
-          <button onClick={() => setCount(count + 1)}>Increment</button>
-          <button onClick={() => setCount(count - 1)}>Decrement</button>
-          <button onClick={() => setCount(0)}>Reset</button>
+        <div className="d-flex m-3">
+          <button
+            className="btn m-2 btn-primary"
+            onClick={() => setCount(count + 1)}
+          >
+            Increment
+          </button>
+          <button
+            className="btn m-2 btn-primary"
+            onClick={() => setCount(count - 1)}
+          >
+            Decrement
+          </button>
+          <button className="btn btn-primary" onClick={() => setCount(0)}>
+            Reset
+          </button>
         </div>
       </div>
     </>
