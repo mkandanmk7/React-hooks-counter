@@ -8,6 +8,7 @@ export const UseEffect = () => {
   //component Did Mount() by default
   useEffect(() => {
     console.log("rendered");
+    return () => console.log("ComponentWillUnmouted"); // inside useEffect() return a function will unmount ;
   }, []);
   //componentDidUpdate() //without having array second param:
 
