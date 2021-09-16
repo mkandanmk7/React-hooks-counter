@@ -4,9 +4,23 @@ import "./index.css";
 import App from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+function Unmount() {
+  const [show, setShow] = React.useState(true);
+  return (
+    <>
+      <div className="container">
+        <button className="btn  m-2 btn-danger" onClick={() => setShow(!show)}>
+          Show / Hide component (Unmount)
+        </button>
+        {show ? <App /> : <h1>ComponentWillUnmouted</h1>}
+      </div>
+    </>
+  );
+}
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Unmount />
   </React.StrictMode>,
   document.getElementById("root")
 );
