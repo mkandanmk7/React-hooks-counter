@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Reducer from "./Reducer";
+import { UseEffect } from "./UseEffect";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -56,6 +57,7 @@ function App() {
           </button>
         </div>
       </div>
+      <UseEffect />
     </>
   );
 }
