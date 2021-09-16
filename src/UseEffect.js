@@ -5,9 +5,20 @@ export const UseEffect = () => {
 
   const [name, changeName] = useState("Mythu");
 
+  //component Did Mount() by default
   useEffect(() => {
     console.log("rendered");
   }, []);
+  //componentDidUpdate() //without having array second param:
+
+  useEffect(() => {
+    console.log("compnent Did Update()");
+  });
+
+  //componentDidUpdate( for count only); if you pass count in array;
+  useEffect(() => {
+    console.log("count only");
+  }, [count]); // if we need to pass name also [count,name];
 
   return (
     <div className="container">
